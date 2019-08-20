@@ -5,13 +5,13 @@ using UnityEngine;
 [CustomGridBrush(false, true, false, "Prefab Brush")]
 public class PrefabBrush : GridBrushBase
 {
-	public GameObject prefab;
+	public UnityEngine.GameObject prefab;
 	public int zPosition = 0;
 
-	private GameObject previousBrushTarget;
+	private UnityEngine.GameObject previousBrushTarget;
 	private Vector3Int previousPosition;
 
-	public override void Paint(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)
+	public override void Paint(GridLayout gridLayout, UnityEngine.GameObject brushTarget, Vector3Int position)
 	{
 		//Check to see if a tile is already placed in that specific cell
 		Transform itemInCell = GetObjectInCell(gridLayout, brushTarget.transform, new Vector3Int(position.x, position.y, zPosition));
@@ -29,7 +29,7 @@ public class PrefabBrush : GridBrushBase
 		if(brushTarget.layer == 31)
 		{ return; }
 
-		GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+		UnityEngine.GameObject instance = (UnityEngine.GameObject)PrefabUtility.InstantiatePrefab(prefab);
 		if(instance)
 		{
 			Undo.MoveGameObjectToScene(instance, brushTarget.scene, "Paint prefab");
@@ -39,7 +39,7 @@ public class PrefabBrush : GridBrushBase
 		}
 	}
 
-	public override void Erase(GridLayout gridLayout, GameObject brushTarget, Vector3Int position)
+	public override void Erase(GridLayout gridLayout, UnityEngine.GameObject brushTarget, Vector3Int position)
 	{
 		if(brushTarget)
 		{ previousBrushTarget = brushTarget; }

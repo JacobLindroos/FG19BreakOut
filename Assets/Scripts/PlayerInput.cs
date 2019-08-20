@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
+[SelectionBase]
 public class PlayerInput : MonoBehaviour
 {
     #region Data types and variables

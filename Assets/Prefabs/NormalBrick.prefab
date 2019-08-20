@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2283063320146567645}
   - component: {fileID: 8941670942007314196}
   - component: {fileID: 2522190145746047655}
+  - component: {fileID: -3610807110597334867}
   m_Layer: 8
   m_Name: NormalBrick
   m_TagString: Untagged
@@ -107,3 +108,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-3610807110597334867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582884207824921164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da5d37c49874c846acaf1bcd22d3987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  causeCameraShake: 1
+  isBreakable: 1
+  sprites:
+  - {fileID: 21300000, guid: 8dba928fbf7c5a849a31a27c7d7fbd1a, type: 3}
+  - {fileID: 21300000, guid: 5e5f5e383c3965045af13a6712fcd697, type: 3}
